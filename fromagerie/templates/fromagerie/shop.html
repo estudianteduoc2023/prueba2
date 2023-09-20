@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link rel="stylesheet" href="{% static 'fromagerie/css/shop.css' %}">
+
+<script src="{% static 'js/carrito.js' %}"></script>
+
+  <!-- Integracion con boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!-- Integracion CSS -->
+  <link rel="stylesheet" href="{% static 'fromagerie/css/style.css'%}">
+  <!-- Integracion con fontawesome -->
+  <script src="https://kit.fontawesome.com/ab6bee0ad1.js" crossorigin="anonymous"></script>
+
+
+ </head>
+
+ 
+ <div class="container my-5">
+  <h2 class="my-5 text-center">CATEGORIAS</h2>
+ </div >
+
+
+<body>
+
+
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+    <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}"><span style="color: #5e9693;">Quesería Duoc UC</span></a>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'shop' %}">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'intranet' %}">intranet</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="shoppingCart.html">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="{% url 'login' %}">
+                <i class="fa fa-user"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://www.instagram.com">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    </header>
+
+
+
+    <section class="productos">
+        <article class="producto">
+            <img src="https://santaisabel.vtexassets.com/arquivos/ids/203821-1000-1000?width=1000&height=1000&aspect=true" alt="Producto 1">
+            <h2>Queso Cheddar</h2>
+            <p class="descripcion">Un queso de sabor fuerte y ligeramente picante, originario de Inglaterra. Se utiliza comúnmente en sándwiches, hamburguesas y platos de pasta</p>
+             <p class="precio" data-precio="15.00">Precio: $15.00</p>
+
+
+            
+            <button class="añadir-carrito" data-id="producto1">Añadir al Carrito</button>
+        </article>
+
+        <article class="producto">
+            <img src="https://santaisabel.vtexassets.com/arquivos/ids/197044-1000-1000?width=1000&height=1000&aspect=true" alt="Producto 2">
+            <h2>Queso Mozzarella</h2>
+            <p class="descripcion">Conocido por su textura suave y cremosa, es el queso principal utilizado en las pizzas. Tiene un sabor suave y es excelente para gratinar.</p>
+
+            <p class="precio" data-precio="15.00">Precio: $15.00</p>
+
+
+
+            <button class="añadir-carrito" data-id="producto2">Añadir al Carrito</button>
+        </article>
+        <article class="producto">
+            <img src="https://santaisabel.vtexassets.com/arquivos/ids/206219-1000-1000?width=1000&height=1000&aspect=true" alt="Producto 2">
+            <h2>Queso Gouda</h2>
+            <p class="descripcion">Originario de los Países Bajos, el queso Gouda es semiduro y tiene un sabor suave y dulce. Se come tanto solo como en sándwiches y platos de queso derretido.</p>
+            <p class="precio" data-precio="15.00">Precio: $15.00</p>
+
+
+        
+            <button class="añadir-carrito" data-id="producto3">Añadir al Carrito</button>
+        </article>
+        <article class="producto">
+            <img src="https://images.lider.cl/wmtcl?source=url[file:/productos/286975a.jpg]&scale=size[2000x2000]&sink" alt="Producto 2">
+            <h2>Queso Roquefort</h2>
+            <p class="descripcion">Un queso azul de origen francés, caracterizado por sus vetas de moho azul verdoso. Tiene un sabor fuerte, salado y picante. Es ideal para acompañar con vinos.</p>
+            <p class="precio" data-precio="15.00">Precio: $15.00</p>
+            
+
+
+            <button class="añadir-carrito" data-id="producto4">Añadir al Carrito</button>
+        </article>
+        <article class="producto">
+          <h2>Queso Brie</h2>
+            <img src="https://unimarc.vtexassets.com/arquivos/ids/233936/000000000000052142-KG-01.jpg?v=638218476533970000" alt="Producto 2">
+            <p class="descripcion">Un queso francés de pasta blanda y cremosa con un sabor suave y mantecoso. Se sirve a menudo con frutas y pan.
+muy rico
+
+
+            </p>
+            <p class="precio" data-precio="15.00">Precio: $15.00</p>
+            
+
+            <button class="añadir-carrito" data-id="producto5">Añadir al Carrito</button>
+        </article>
+        <article class="producto">
+          <h2>Queso Parmesano</h2>
+            <img src="https://images.lider.cl/wmtcl?source=url[file:/productos/543106a.jpg]&scale=size[2000x2000]&sink" alt="Producto 2">
+            <p class="descripcion"> Este queso italiano es conocido por su sabor umami y su textura granulada. Se utiliza comúnmente rallado sobre platos de pasta y ensaladas.</p>
+            <p class="precio" data-precio="15.00">Precio: $15.00</p>
+
+
+
+            <button class="añadir-carrito" data-id="producto6">Añadir al Carrito</button>
+        </article>
+   
+<script src="{% static 'fromagerie/js/carrito.js' %}"></script>
+
+<div id="carrito">
+          <h2>Carrito</h2>
+          <ul id="lista-carrito">
+              <!-- probando el js del carrito  -->
+          </ul>
+          <p>Total: <span id="total-carrito">$0.00</span></p>
+</div>
+      
+
+
+ 
+    </section>
+
+    <footer>
+        <p>&copy; QuesosDUOC</p>
+    </footer>
+</body>
+</html>
